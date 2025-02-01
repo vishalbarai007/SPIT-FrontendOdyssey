@@ -1,4 +1,4 @@
-import Intro from "./pages/Intro"
+// import Intro from "./pages/Intro"
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
@@ -14,6 +14,8 @@ import HealthDetailsForm from "./components/DeveloperDefineComponents/forms/Heal
 import GoalDetailsForm from "./components/DeveloperDefineComponents/forms/GoalDetailsForm";
 import FoodDetailsForm from "./components/DeveloperDefineComponents/forms/FoodDetailsForm";
 import DailyActivityForm from "./components/DeveloperDefineComponents/forms/DailyActivityForm";
+import HealthGoals from "./pages/HealthGoals";
+import Index from "./components/DeveloperDefineComponents/dummyhome";
 
 const App = () => {
   return (
@@ -22,11 +24,14 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<SplashScreen />} />
-          <Route path="/intro" element={<Intro />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/mainhome" element={<Home />} />
+          <Route path="/featurehome" element={<Index />} />
+
           <Route path="/personaldetails" element={<PersonalDetailsForm />} />
           <Route path="/healthdetails" element={<HealthDetailsForm/>} />
+          <Route path="/healthgoals" element={<HealthGoals/>} />
+
           <Route path="/goaldetails" element={<GoalDetailsForm />} />
           <Route path="/fooddetails" element={<FoodDetailsForm />} />
           <Route path="/dailyactivitydetails" element={<DailyActivityForm />} />

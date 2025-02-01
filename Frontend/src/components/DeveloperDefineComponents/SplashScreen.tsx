@@ -7,7 +7,7 @@ import { FaHeartbeat, FaUserMd, FaDumbbell, FaSpa } from 'react-icons/fa'
 import { GiMeditation, GiWeightLiftingUp, GiFruitBowl } from 'react-icons/gi'
 import { BiPulse } from 'react-icons/bi'
 
-const useLoading = (duration: number = 4000): boolean => {
+const useLoading = (duration: number = 3000): boolean => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function SplashScreen() {
 
   useEffect(() => {
     if (!isLoading) {
-      const timer = setTimeout(() => navigate('/profile'), 5000)
+      const timer = setTimeout(() => navigate('/featurehome'), 2000)
       return () => clearTimeout(timer)
     }
   }, [isLoading, navigate])

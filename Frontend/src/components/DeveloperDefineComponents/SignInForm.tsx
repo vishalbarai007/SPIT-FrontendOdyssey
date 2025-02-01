@@ -32,7 +32,7 @@ export function SignInFormDemo() {
     });
   };
   const goToHome = () => {
-    navigate("/home");
+    navigate("/dashboard");
   }
 
 

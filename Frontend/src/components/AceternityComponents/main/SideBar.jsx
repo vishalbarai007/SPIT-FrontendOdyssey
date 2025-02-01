@@ -30,7 +30,7 @@ const SidebarDemo = () => {
   const menuItems = [
     { id: "/profile", icon: FaUser, label: "Profile" },
     { id: "/dashboard", icon: FaChartLine, label: "Dashboard" },
-    { id: "/goals", icon: FaBullseye, label: "Health Goals" },
+    { id: "/healthgoals", icon: FaBullseye, label: "Health Goals" },
     { id: "/activity", icon: FaRunning, label: "Activity Summary" },
     { id: "/community", icon: FaUsers, label: "Community" },
     { id: "/reminders", icon: FaBell, label: "Reminders" },
