@@ -23,6 +23,10 @@ export function SignupFormDemo() {
 
   const navigate = useNavigate();
 
+  const submitMe = () => {
+    navigate('/home');
+  }
+
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
@@ -114,7 +118,7 @@ export function SignupFormDemo() {
               ? "from-gray-200 to-white shadow-input"
               : "from-black to-neutral-600"
           )}
-          type="submit"
+          onClick={submitMe}
         >
           Sign up &rarr;
           <BottomGradient />
