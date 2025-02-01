@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 import SplashScreen from "./components/DeveloperDefineComponents/SplashScreen";
 import DashBoard from "./pages/DashBoard";
 import Graphs from "./pages/Graphs";
+import AskAIMain from "./pages/AskAI";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/graphs" element={<Graphs />} />
+          <Route path='/askai' element={<AskAIMain/>} />
         </Routes>
 
       </BrowserRouter>

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
     "@radix-ui/react-label": "^2.1.0",
     "@react-three/fiber": "^8.17.10",
     "@splidejs/react-splide": "^0.7.12",
@@ -17,6 +18,7 @@
     "aceternity": "^1.0.1",
     "aceternity-ui": "^0.2.2",
     "chart.js": "^4.4.7",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "firebase": "^11.0.2",
     "framer-motion": "^11.15.0",

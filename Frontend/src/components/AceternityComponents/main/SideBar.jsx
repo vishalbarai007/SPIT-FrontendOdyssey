@@ -10,7 +10,7 @@ export function SidebarDemo() {
   const links = [
     { label: "Dashboard", href: "/dashboard", icon: <IconBrandTabler className="icon" /> },
     { label: "Profile", href: "/profile", icon: <IconUserBolt className="icon" /> },
-    { label: "Ask AI", href: "/home", icon: <IconBrain className="icon" /> },
+    { label: "Ask AI", href: "/askai", icon: <IconBrain className="icon" /> },
     { label: "Logout", href: "/login", icon: <IconArrowLeft className="icon" /> },
   ];
   const [open, setOpen] = useState(false);
