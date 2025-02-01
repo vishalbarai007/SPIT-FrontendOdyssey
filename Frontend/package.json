@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.0",
-    "@react-three/fiber": "^8.17.10",
+    "@react-spring/three": "^9.7.5",
+    "@react-three/drei": "^9.121.4",
+    "@react-three/fiber": "^8.17.14",
     "@splidejs/react-splide": "^0.7.12",
     "@tabler/icons-react": "^3.24.0",
     "aceternity": "^1.0.1",
