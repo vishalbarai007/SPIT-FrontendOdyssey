@@ -35,7 +35,7 @@ export default function SplashScreen() {
 
   useEffect(() => {
     if (!isLoading) {
-      const timer = setTimeout(() => navigate('/Intro'), 10000)
+      const timer = setTimeout(() => navigate('/profile'), 5000)
       return () => clearTimeout(timer)
     }
   }, [isLoading, navigate])
