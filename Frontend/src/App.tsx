@@ -10,6 +10,10 @@ import DashBoard from "./pages/DashBoard";
 import Graphs from "./pages/Graphs";
 import AskAIMain from "./pages/AskAI";
 import PersonalDetailsForm from "./components/DeveloperDefineComponents/forms/Personaldetails";
+import HealthDetailsForm from "./components/DeveloperDefineComponents/forms/HealthDetailsForm";
+import GoalDetailsForm from "./components/DeveloperDefineComponents/forms/GoalDetailsForm";
+import FoodDetailsForm from "./components/DeveloperDefineComponents/forms/FoodDetailsForm";
+import DailyActivityForm from "./components/DeveloperDefineComponents/forms/DailyActivityForm";
 
 const App = () => {
   return (
@@ -22,6 +26,11 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/personaldetails" element={<PersonalDetailsForm />} />
+          <Route path="/healthdetails" element={<HealthDetailsForm/>} />
+          <Route path="/goaldetails" element={<GoalDetailsForm />} />
+          <Route path="/fooddetails" element={<FoodDetailsForm />} />
+          <Route path="/dailyactivitydetails" element={<DailyActivityForm />} />
+
           <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/graphs" element={<Graphs />} />
