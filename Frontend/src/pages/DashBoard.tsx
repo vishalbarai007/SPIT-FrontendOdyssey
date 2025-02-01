@@ -15,7 +15,7 @@ const DashBoard = () => {
   const textColorClass = contextTheme?.theme === 'light' ? 'text-black' : 'text-white';
 
   return (
-    <div className={`flex-1 p-4 sm:p-6 lg:p-8 ml-0 sm:ml-24 ${contextTheme?.theme==='dark'?'bg-black':'bg-white'}`}>
+    <div className={`flex-1 p-4 sm:p-6 lg:p-8 ml-0 sm:ml-10 ${contextTheme?.theme==='dark'?'bg-black':'bg-white'}`}>
       <SidebarDemo />
       {/* Header */}
       <div className='flex items-center gap-4 mb-6 sm:mb-8'>
