@@ -9,6 +9,7 @@ import SplashScreen from "./components/DeveloperDefineComponents/SplashScreen";
 import DashBoard from "./pages/DashBoard";
 import Graphs from "./pages/Graphs";
 import AskAIMain from "./pages/AskAI";
+import PersonalDetailsForm from "./components/DeveloperDefineComponents/forms/Personaldetails";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/intro" element={<Intro />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/personaldetails" element={<PersonalDetailsForm />} />
           <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/graphs" element={<Graphs />} />
