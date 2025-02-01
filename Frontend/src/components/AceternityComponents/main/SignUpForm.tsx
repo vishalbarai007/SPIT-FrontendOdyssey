@@ -35,9 +35,6 @@ export function SignupFormDemo() {
     cpassword: ""
   });
 
-  const goToIntro = (uid : string) => {
-    navigate("/intro", { state: uid });
-  }
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({
@@ -66,7 +63,7 @@ export function SignupFormDemo() {
       )}
     >
       <h2 className="font-bold text-xl">
-        Welcome to DIE-ATE Planner
+        Welcome to FitSync
       </h2>
       <p className="text-sm max-w-sm mt-2">
         Login to get your Diet Details.

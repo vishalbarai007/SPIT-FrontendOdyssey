@@ -77,8 +77,8 @@ export function SignInFormDemo() {
                 ? "from-gray-200 to-white shadow-input"
                 : "from-black to-neutral-600"
             )}
-            type="submit"
-          >
+            onClick={goToHome}
+  >
             Sign In &rarr;
             <BottomGradient />
           </button>

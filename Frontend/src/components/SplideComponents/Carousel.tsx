@@ -2,12 +2,12 @@ import { Splide, SplideSlide, SplideProps } from '../../../node_modules/@splidej
 import { useState } from 'react';
 import { BackgroundLines } from '../AceternityComponents/support/background-lines';
 import { Input } from '../AceternityComponents/support/input';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // import { addPersonalData } from "../../../firebase";
 
 const Carousel = () => {
-    const location = useLocation();
-    const uid = location.state;
+    // const location = useLocation();
+    // const uid = location.state;
     const navigate = useNavigate();
 
     enum Gender {
