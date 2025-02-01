@@ -1,61 +1,84 @@
-import React, { useState, useContext } from "react";
-import { Sidebar, SidebarBody, SidebarLink } from "../support/sidebar";
-import { IconArrowLeft, IconBrandTabler, IconBrain, IconUserBolt } from "@tabler/icons-react";
-import { motion } from "framer-motion";
-import { cn } from "../../../lib/utils";
-import ThemeContext from "../../../contexts/theme/ThemeContext";
-// import { Logout } from "../../../../firebase";
+import { useState } from "react"
+import {
+  FaUser,
+  FaChartLine,
+  FaBullseye,
+  FaRunning,
+  FaLightbulb,
+  FaUsers,
+  FaBell,
+  FaAppleAlt,
+  FaChartBar,
+  FaRobot,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa"
 
-export function SidebarDemo() {
-  const links = [
-    { label: "Dashboard", href: "/dashboard", icon: <IconBrandTabler className="icon" /> },
-    { label: "Profile", href: "/profile", icon: <IconUserBolt className="icon" /> },
-    { label: "Ask AI", href: "/askai", icon: <IconBrain className="icon" /> },
-    { label: "Logout", href: "/login", icon: <IconArrowLeft className="icon" /> },
-  ];
-  const [open, setOpen] = useState(false);
-  const contextTheme = useContext(ThemeContext);
+const Sidebar = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("dashboard")
+  const [userData] = useState({ name: "John Doe", category: "Professional" })
+
+  const menuItems = [
+    { id: "profile", icon: FaUser, label: "Profile" },
+    { id: "dashboard", icon: FaChartLine, label: "Dashboard" },
+    { id: "goals", icon: FaBullseye, label: "Health Goals" },
+    { id: "activity", icon: FaRunning, label: "Activity Summary" },
+    { id: "recommendations", icon: FaLightbulb, label: "Recommendations" },
+    { id: "community", icon: FaUsers, label: "Community Forums" },
+    { id: "reminders", icon: FaBell, label: "Reminders" },
+    { id: "nutrition", icon: FaAppleAlt, label: "Diet & Nutrition" },
+    { id: "progress", icon: FaChartBar, label: "Progress Reports" },
+    { id: "ai", icon: FaRobot, label: "Ask AI" },
+  ]
 
   return (
-    <div className="flex">
-      <Sidebar open={open} setOpen={setOpen}>
-        <SidebarBody open={open} setOpen={setOpen} className="justify-between gap-10">
-          <div className="overflow-x-hidden flex flex-col flex-1 overflow-y-auto">
-            {open ? <Logo /> : <LogoIcon />}
-            <div className="mt-8 flex flex-col gap-2">
-              {links.map((link, idx) => (
-                <SidebarLink key={idx} link={link} />
-              ))}
+    <div>
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        className="fixed top-4 left-4 z-50 lg:hidden bg-white p-2 rounded-lg shadow-md"
+        aria-label={isSidebarOpen ? "Close menu" : "Open menu"}
+      >
+        {isSidebarOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed inset-y-0 left-0 z-40 w-64 bg-white shadow-lg transition-transform duration-300 ease-in-out ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } lg:translate-x-0`}
+      >
+        <div className="p-6">
+          <div className="flex items-center space-x-3 mb-8">
+            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+              <FaUser className="text-blue-600" />
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900">{userData.name}</h3>
+              <p className="text-sm text-gray-500">{userData.category}</p>
             </div>
           </div>
-        </SidebarBody>
-      </Sidebar>
-      {/* <Dashboard /> */}
+
+          <nav className="space-y-1">
+            {menuItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => setActiveSection(item.id)}
+                className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
+                  activeSection === item.id ? "bg-blue-50 text-blue-600" : "text-gray-600 hover:bg-gray-50"
+                }`}
+              >
+                <item.icon />
+                <span>{item.label}</span>
+              </button>
+            ))}
+          </nav>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export const Logo = () => {
-  const contextTheme = useContext(ThemeContext); // Access the theme context
-  const textColor = contextTheme?.theme === "dark" ? "text-white" : "text-black"; // Determine color based on theme
+export default Sidebar
 
-  return (
-    <a href="#" className="logo">
-      <div className="logo-icon" />
-      <motion.span
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className={cn("text-lg font-bold", textColor)} // Apply dynamic text color
-      >
-        DIE-ATE Planner
-      </motion.span>
-    </a>
-  );
-};
-
-
-export const LogoIcon = () => (
-  <a href="#" className="logo-icon-container">
-    <div className="logo-icon" />
-  </a>
-);

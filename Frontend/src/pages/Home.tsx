@@ -1,4 +1,4 @@
-import { SidebarDemo } from '../components/AceternityComponents/main/SideBar'
+import SidebarDemo from '../components/AceternityComponents/main/SideBar'
 import DashBoard from './DashBoard'
 
 export default function Home() {

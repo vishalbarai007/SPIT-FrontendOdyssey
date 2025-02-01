@@ -1,6 +1,6 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { SidebarDemo } from "../components/AceternityComponents/main/SideBar"
+import SidebarDemo from "../components/AceternityComponents/main/SideBar";
 import PatientInfo from "../components/DeveloperDefineComponents/PatientInfo"
 import ThemeContext from '../contexts/theme/ThemeContext';
 import { useContext } from 'react';

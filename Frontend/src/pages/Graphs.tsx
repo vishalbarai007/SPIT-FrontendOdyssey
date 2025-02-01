@@ -1,4 +1,4 @@
-import { SidebarDemo } from "../components/AceternityComponents/main/SideBar"
+import SidebarDemo from "../components/AceternityComponents/main/SideBar"
 import { TabsDemo } from "../components/AceternityComponents/main/Tabs"
 
 const Graphs = () => {
