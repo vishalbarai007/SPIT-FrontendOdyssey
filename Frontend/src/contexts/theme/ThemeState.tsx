@@ -6,7 +6,7 @@ interface ThemeStateProps {
 }
 
 const ThemeState = ({ children }: ThemeStateProps) => {
-  const [theme, setTheme] = useState<string>("dark");
+  const [theme, setTheme] = useState<string>("light");
 
   const changeTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));

@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 /* Prevent horizontal scrollbars */
-body{
-    background-color: black;
-}
 
 /* Add this CSS to your stylesheet */
 .custom-arrows {

@@ -10,10 +10,13 @@ import {
   Title,
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
+import { useContext } from 'react';
+import ThemeContext from '../../contexts/theme/ThemeContext';
 
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend, Title);
 
 const NutrientExcess: React.FC = () => {
+  const context = useContext(ThemeContext);
   // Dummy data for nutrient intake
   const data = {
     labels: ['Protein', 'Carbs', 'Fats', 'Vitamins', 'Minerals', 'Fiber'], // Nutrient categories
@@ -45,7 +48,7 @@ const NutrientExcess: React.FC = () => {
       title: {
         display: true,
         text: 'Nutrient Deficiency Alerts',
-        color: 'white', // Title text color
+        color: `${context?.theme==='dark'?'white':'black'}`, // Title text color
       },
     },
     scales: {
@@ -59,21 +62,22 @@ const NutrientExcess: React.FC = () => {
         },
         angleLines: {
           display: true,
-          color: 'rgba(255, 255, 255, 0.5)', // Angle lines color
+          color: `${context?.theme==='dark'?'rgba(255, 255, 255, 0.5)':'rgba(0, 0, 0, 0.5)'}`, // Angle lines color
         },
         grid: {
-          color: 'rgba(255, 255, 255, 0.5)', // Grid lines color
+          color: `${context?.theme==='dark'?'rgba(255, 255, 255, 0.5)':'rgba(0, 0, 0, 0.5)'}`, // Grid lines color
         },
         pointLabels: {
-          color: 'white', // Labels color (e.g., Protein, Carbs, etc.)
+          color: `${context?.theme==='dark'?'white':'black'}`, // Labels color (e.g., Protein, Carbs, etc.)
         },
       },
     },
   };
 
+
   return (
     <div
-      className="h-fit w-full rounded-lg shadow-input border-2 border-blue-500 shadow-blue-500/50 hover:shadow-[0_0_10px_5px_rgba(0,119,255,1)] hover:border-blue-500 transition-all duration-300 bg-gray-900"
+      className={`h-fit w-full rounded-lg shadow-input border-2 border-blue-500 shadow-blue-500/50 hover:shadow-[0_0_10px_5px_rgba(0,119,255,1)] hover:border-blue-500 transition-all duration-300 ${context?.theme==='dark'?'bg-gray-900':'bg-neutral-100'}`}
     >
       <Radar data={data} options={options} />
     </div>

@@ -10,7 +10,7 @@ const patientData: Patient = {
   contact: {
     phone1: "07723 456789",
     phone2: "01980 123456",
-    email: "manishRawatOfficial01@gmail.com",
+    email: "manishRawat01@gmail.com",
     address: "15 Trevelyan Avenue, Lundon, SW12 1J3"
   },
 };
@@ -19,7 +19,7 @@ const PatientInfo = () => {
     const contextTheme = useContext(ThemeContext);
 
   const baseCardStyle = `
-    ${contextTheme?.theme === 'light' ? 'bg-neutral-200' : 'bg-gray-900'}
+    ${contextTheme?.theme === 'light' ? 'bg-neutral-100' : 'bg-gray-900'}
     rounded-lg
     shadow-input
     border-2

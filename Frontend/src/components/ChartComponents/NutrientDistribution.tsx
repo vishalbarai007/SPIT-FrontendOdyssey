@@ -7,7 +7,7 @@ import ThemeContext from "../../contexts/theme/ThemeContext";
 
 const chartData = [
   { nutrient: "Proteins", value: 40, color: "rgba(255, 87, 51, 0.3)", border: "rgba(255, 87, 51, 0.8)" }, // Semi-transparent Orange
-  { nutrient: "Carbohydrates", value: 35, color: "rgba(51, 255, 87, 0.3)", border: "rgba(51, 255, 87, 0.8)" }, // Semi-transparent Green
+  { nutrient: "Carbohydrates", value: 35, color: "rgba(51, 255, 87, 0.3)", border: "rgba(51, 230, 87, 0.8)" }, // Semi-transparent Green
   { nutrient: "Fats", value: 15, color: "rgba(51, 87, 255, 0.3)", border: "rgba(51, 87, 255, 0.8)" }, // Semi-transparent Blue
   { nutrient: "Vitamins", value: 5, color: "rgba(255, 215, 0, 0.3)", border: "rgba(255, 215, 0, 0.8)" }, // Semi-transparent Yellow
   { nutrient: "Minerals", value: 5, color: "rgba(255, 51, 161, 0.3)", border: "rgba(255, 51, 161, 0.8)" }, // Semi-transparent Pink
@@ -21,7 +21,7 @@ export default function NutrientPieDonutChart() {
   );
 
   return (
-    <div className={`flex flex-col items-center gap-4 p-4 ${contextTheme?.theme === 'dark' ? 'bg-gray-900' : 'bg-white'} rounded-lg
+    <div className={`flex flex-col items-center gap-4 p-4 ${contextTheme?.theme === 'dark' ? 'bg-gray-900' : 'bg-neutral-100'} rounded-lg
     shadow-input
     border-2
     border-blue-500
