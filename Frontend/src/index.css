@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .toggle-checkbox:checked {
+    @apply: right-0 border-green-400;
+    right: 0;
+    border-color: #68D391;
+  }
+  .toggle-checkbox:checked + .toggle-label {
+    @apply: bg-green-400;
+    background-color: #68D391;
+  }
+}
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+

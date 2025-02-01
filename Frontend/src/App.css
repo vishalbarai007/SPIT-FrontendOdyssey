@@ -1,0 +1,41 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+/* Prevent horizontal scrollbars */
+body{
+    background-color: black;
+}
+
+/* Add this CSS to your stylesheet */
+.custom-arrows {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    position: absolute !important;
+    top: 90% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+    padding: 1rem 2rem !important;
+}
+.custom-arrow {
+    background: none !important;
+    border: 2px solid white !important;
+    color: white !important;
+    padding: 10px 50px !important;
+    font-size: 1.2rem !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease-in-out !important;
+    border-radius: 30px !important;
+}
+.custom-arrow:hover {
+    background-color: white !important;
+    color: black !important;
+}
+.custom-prev::before {
+    content: 'Previous' !important;
+}
+.custom-next::before {
+    content: 'Next' !important;
+}
